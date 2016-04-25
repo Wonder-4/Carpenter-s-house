@@ -10,3 +10,6 @@ handlers:
 
 - url: .*
   script: main.php
+
+- url: control
+  script: control.js

@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://localhost:8033/control"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--<link href="/stylesheet" rel="stylesheet" type="text/css">-->
     <title>木匠之家捐贈物資</title>
@@ -138,22 +139,22 @@
             <p class="text-center">We are a group of skilled individuals.</p>
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <form role="form">
+              <form role="form" >
                 <div class="form-group">
                   <label class="control-label">姓名</label>
-                  <input class="form-control" type="text" placeholder="您的大名">
+                  <input class="form-control" type="text" placeholder="您的大名" required>
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="exampleInputEmail1">聯絡信箱</label>
-                  <input class="form-control" id="exampleInputEmail1" placeholder="您的聯繫信箱" type="email">
+                  <input class="form-control" id="exampleInputEmail1" placeholder="您的聯繫信箱" type="email" required>
                 </div>
                 <div class="form-group">
                   <label class="control-label">連絡電話</label>
-                  <input class="form-control" type="text" placeholder="您的聯繫電話">
+                  <input class="form-control" type="text" placeholder="您的聯繫電話" required>
                 </div>
                 <div class="form-group">
                   <label class="control-label">運載地址</label>
-                  <input class="form-control" type="text" placeholder="您的聯絡地址">
+                  <input class="form-control" type="text" placeholder="您的聯絡地址" reqiured>
                 </div>
                 <div class="form-group">
                   <label class="control-label">方便聯絡時間</label>
@@ -165,7 +166,7 @@
                 <div class="form-group">
                   <input type="file">
                 </div>
-                <button type="submit" class="btn btn-default">新增檔案</button>
+                <button id="SubmitData" type="submit" class="btn btn-default">新增檔案</button>
               </form>
               <div class="col-md-12">
                 <h3>捐物條款</h3>
