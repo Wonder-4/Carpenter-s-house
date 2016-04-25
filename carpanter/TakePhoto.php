@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://localhost:8033/control"></script>
+    <script type="text/javascript"><?require("control.js");?></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--<link href="/stylesheet" rel="stylesheet" type="text/css">-->
     <title>木匠之家捐贈物資</title>
-    <style type="text/css"><?require("stylesheet.css.php");?></style>
+    <style type="text/css"><?require("stylesheet.css");?></style>
   </head><body>
 <script>
       //控制按鈕的顯示方式
