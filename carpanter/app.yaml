@@ -11,5 +11,5 @@ handlers:
 - url: .*
   script: main.php
 
-- url: control
-  script: control.js
+- url: /test
+  script: TakePhoto.php

@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://localhost:8033/control"></script>
+    <script type="text/javascript"><?require("control.js");?></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--<link href="/stylesheet" rel="stylesheet" type="text/css">-->
     <title>木匠之家捐贈物資</title>
-    <style type="text/css"><?require("stylesheet.css.php");?></style>
+    <style type="text/css"><?require("stylesheet.css");?></style>
   </head><body>
 
     <div class="navbar navbar-default navbar-static-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"><span>Brand</span></a></div><div class="collapse navbar-collapse" id="navbar-ex-collapse"><ul class="nav navbar-nav navbar-right"><li class="active"><a href="#">Home</a></li><li><a href="#">Contacts</a></li></ul></div></div></div><div class="cover">
@@ -139,34 +139,37 @@
             <p class="text-center">We are a group of skilled individuals.</p>
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <form role="form" >
+              <form role="form" method="post" enctype="multipart/form-data" action="http://linen-totality-802.appspot.com/">
                 <div class="form-group">
                   <label class="control-label">姓名</label>
-                  <input class="form-control" type="text" placeholder="您的大名" required>
+                  <input id="Donater" class="form-control" type="text" placeholder="您的大名" required>
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="exampleInputEmail1">聯絡信箱</label>
-                  <input class="form-control" id="exampleInputEmail1" placeholder="您的聯繫信箱" type="email" required>
+                  <input id="Donater-email" class="form-control" id="exampleInputEmail1" placeholder="您的聯繫信箱" type="email" required>
                 </div>
                 <div class="form-group">
                   <label class="control-label">連絡電話</label>
-                  <input class="form-control" type="text" placeholder="您的聯繫電話" required>
+                  <input id="Donater-Phone" class="form-control" type="text" placeholder="您的聯繫電話" required>
                 </div>
                 <div class="form-group">
                   <label class="control-label">運載地址</label>
-                  <input class="form-control" type="text" placeholder="您的聯絡地址" reqiured>
+                  <input id="Donater-Address" class="form-control" type="text" placeholder="您的聯絡地址" reqiured>
                 </div>
                 <div class="form-group">
                   <label class="control-label">方便聯絡時間</label>
                   <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
+                    <?
+                      for ($i=0; $i < 12; $i++) { 
+                        echo "<option>".($i+1)."</option>";
+                      }
+                    ?>
                   </select>
                 </div>
                 <div class="form-group">
                   <input type="file">
                 </div>
-                <button id="SubmitData" type="submit" class="btn btn-default">新增檔案</button>
+                <button id="AddFile" class="btn btn-default">新增檔案</button>
               </form>
               <div class="col-md-12">
                 <h3>捐物條款</h3>
@@ -181,7 +184,7 @@
                   </div>
                 </form>
                 <div class="col-md-12">
-                  <a class="btn btn-block btn-lg btn-primary">Click me</a>
+                  <a class="btn btn-block btn-lg btn-primary" type="submit">Click me</a>
                 </div>
               </div>
             </div>
