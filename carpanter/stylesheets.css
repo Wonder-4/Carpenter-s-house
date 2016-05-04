@@ -6760,3 +6760,65 @@ body {
   background-attachment: fixed;
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
+
+/* To top button */
+.totop {
+  display: none;
+  position: fixed;
+  font-size: 24px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 99;
+  text-align: center;
+}
+.totop a:link, .totop a:hover, .totop a:focus, .totop a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.totop span {
+  display: block;
+  background-color: #f29d65;
+  color: #fff;
+  border-radius: 10%;
+  padding: 5px;
+  margin-top: 3px;
+}
+.totop::before {
+  content: '';
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 25px 18px;
+  border-style: solid;
+  border-color: transparent transparent #f29d65
+}
+
+.l-tag {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.l-tag .l-img {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 35%;
+  overflow: hidden;
+}
+.l-tag .l-img .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-image: url(http://www.transparenttextures.com/patterns/climpek.png);
+}
+.l-tag .l-img img {
+  position: absolute;
+  width: 110%;
+  top: 0;
+  left: -5%;
+}
