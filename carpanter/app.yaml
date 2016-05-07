@@ -8,7 +8,7 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /index
+- url: /
   script: main.php
 
 - url: /test

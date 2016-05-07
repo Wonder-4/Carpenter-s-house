@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript"><?require("control.js");?></script>
+    <script type="text/javascript"><?require("js/control.js");?></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--<link href="/stylesheet" rel="stylesheet" type="text/css">-->
     <title>木匠之家捐贈物資</title>
@@ -154,7 +154,7 @@
             <p class="text-center">一份舊物，一份珍惜</p>
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <form role="form">
+              <form role="form" enctype="multipart/form-data" method="post" name="Donatedata" action="http://123.241.180.25/carpanter/GetData.php">
                 <div class="form-group">
                   <label class="control-label">姓名</label>
                   <input class="form-control" type="text" placeholder="您的大名" required>
@@ -167,8 +167,12 @@
                   <label class="control-label">運載地址</label>
                   <input class="form-control" type="text" placeholder="您的聯絡地址" required>
                 </div>
-                <div class="form-group">
-                  <input type="file">
+                <div class="form-group" id="ItemDetail">
+                  <button class="btn btn-block btn-lg btn-primary" id="plus">新增檔案</button>
+                  <label class="control-label">捐贈物品</label>
+                  <input class="form-control" type="text" placeholder="物品名稱" required></input>
+                  <input type="file" required>
+                  <input class="form-control" type="text" placeholder="物品詳細狀況"></input>
                 </div>
                   <h3>捐物條款</h3>
                   <ul>
@@ -178,10 +182,10 @@
                     <li>為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。</li>
                   </ul>
                   <div class="form-group">
-                    <input id="Terms_of_Service" type="checkbox">
+                    <input id="Terms_of_Service" type="checkbox" required>
                     <label for="Terms_of_Service">以上資料我已詳細閱讀並同意進行捐贈</label>
                   </div>
-                    <a class="btn btn-block btn-lg btn-primary">提交表單</a>
+                    <a class="btn btn-block btn-lg btn-primary" href="javascript:SendForm();">提交表單</a>
               </form>
             </div>
             <div class="col-md-2"></div>
