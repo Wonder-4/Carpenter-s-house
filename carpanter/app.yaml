@@ -13,3 +13,9 @@ handlers:
 
 - url: /test
   script: TakePhoto.php
+  
+- url: /form
+  script: form-test.php
+
+- url: /recieve
+  script: recieve.php
